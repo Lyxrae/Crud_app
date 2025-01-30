@@ -42,7 +42,7 @@ class StudentController extends Controller
             'email' => 'required|unique:students,email,' . $request->student_id,
             'phone' => 'required|string|min:10'
         ]);
-
+        //Update 
         $student = Student::findOrFail($request->student_id);
         $student->student_name = $request->student_name;
         $student->email = $request->email;

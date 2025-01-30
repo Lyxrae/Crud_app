@@ -139,8 +139,10 @@
                             </div>
                         @endforeach
                     @else
-                        <p colspan="5">No student found!</p>
-                    @endif
+                <tr>
+                    <td colspan="5" class="text-center">No Student found!</td>
+                </tr>
+                @endif
                 </tr>
             </tbody>
         </table>
