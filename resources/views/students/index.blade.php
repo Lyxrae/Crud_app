@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="d-flex justify-content-center mt-4 flex-column align-items-center">
-        <h3 class="mb-3">Students</h3>
+        <h3 class="mb-3"> Students</h3>
         {{-- add student button --}}
         <button type="submit" class="btn btn-sm btn-success float-end mb-1" data-bs-toggle="modal"
             data-bs-target="#addModal">Add Student</button>
