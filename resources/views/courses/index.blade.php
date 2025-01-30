@@ -49,9 +49,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    @if (count($courses) > 0)
-                        @foreach ($courses as $course)
+
+                @if (count($courses) > 0)
+                    @foreach ($courses as $course)
+                        <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $course->course_name }}</td>
                             <td>{{ $course->description }}</td>
@@ -125,13 +126,14 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
-                    @else
-                <tr>
-                    <td colspan="5" class="text-center">No Course found!</td>
-                </tr>
+                        <tr>
+                    @endforeach
+                @else
+                    <tr>
+                        <td colspan="5" class="text-center">No Course found!</td>
+                    </tr>
                 @endif
-                </tr>
+
             </tbody>
         </table>
     </div>

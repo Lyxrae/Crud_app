@@ -55,9 +55,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    @if (count($students) > 0)
-                        @foreach ($students as $student)
+
+                @if (count($students) > 0)
+                    @foreach ($students as $student)
+                        <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $student->student_name }}</td>
                             <td>{{ $student->email }}</td>
@@ -137,13 +138,14 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
-                    @else
-                <tr>
-                    <td colspan="5" class="text-center">No Student found!</td>
-                </tr>
+                        </tr>
+                    @endforeach
+                @else
+                    <tr>
+                        <td colspan="5" class="text-center">No Student found!</td>
+                    </tr>
                 @endif
-                </tr>
+
             </tbody>
         </table>
     </div>
